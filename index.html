@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UiTM E-Profile - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="container my-4">
+        <div class="title">UiTM E-Profile</div>
+    </div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <img src="image/logo.png" alt="logo" width="30" height="24">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profiles.html">Profiles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="setting.html">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="report.html">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+                <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Content Section -->
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1>Welcome to UiTM E-Profile</h1>
+            <p class="lead">This platform allows you to manage your student profile, track research progress, and access important academic information.</p>
+            <div class="d-flex gap-2">
+                <a href="profiles.html" class="btn btn-primary btn-lg">View Profile</a>
+                <a href="report.html" class="btn btn-success btn-lg">View Report</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="image/uitm.png" alt="UiTM Logo" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+</div>
+
+    <!-- Filter Section -->
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <input type="Department" class="form-control" id="floatingDepartment" placeholder="Department">
+                <label for="floatingDepartment"><i class="fa-solid fa-building"></i> Department</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating">
+                <select class="form-select" id="facultySelect" aria-label="Select Faculty" onchange="redirectToPage()">
+                    <option selected disabled>Select Faculty</option>
+                    <option value="ayu.html">Faculty of Islamic Studies</option>
+                    <option value="nisa.html">Faculty of Communication and Media</option>
+                    <option value="syirah.html">Faculty of Law</option>
+                    <option value="teha.html">Faculty of Accounting</option>
+                    <option value="aidid.html">Faculty of Civil Engineering</option>
+                    <option value="mera.html">Faculty of Applied Sciences</option>
+                </select>
+                
+                <script>
+                    function redirectToPage() {
+                        var select = document.getElementById("facultySelect");
+                        var selectedValue = select.value;
+                        
+                        if (selectedValue) {
+                            window.location.href = selectedValue;
+                        }
+                    }
+                </script>
+                
+                <label for="floatingSelect"><i class="fa-solid fa-school"></i> Faculty</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <input type="Project" class="form-control" id="floatingProject" placeholder="Project">
+                <label for="floatingProject"><i class="fa-solid fa-briefcase"></i> Project</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-floating mb-3">
+                <input type="Search" class="form-control" id="floatingSearch" placeholder="Search">
+                <label for="floatingSearch"><i class="fa-solid fa-search"></i> Search</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Statistics Section -->
+<div class="container my-5">
+    <h3 class="text-center mb-4">Research Stats</h3>
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 shadow-sm border-0 rounded">
+                <i class="fa-solid fa-list-check fa-3x text-warning"></i>
+                <h4 class="mt-3">11,234 Research</h4>
+                <p class="text-muted">Ongoing Research</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 shadow-sm border-0 rounded">
+                <i class="fa-solid fa-check-double fa-3x text-success"></i>
+                <h4 class="mt-3">10,234 Completed</h4>
+                <p class="text-muted">Research Completed</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card p-4 shadow-sm border-0 rounded">
+                <i class="fa-solid fa-circle-xmark fa-3x text-danger"></i>
+                <h4 class="mt-3">12 Not Complete</h4>
+                <p class="text-muted">Pending Research</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistics Section with Charts -->
+<div class="container-fluid bg-body-tertiary py-5">
+    <div class="container">
+        <h3 class="text-center mb-4">Research Stats</h3>
+        <div class="row">
+            
+            <!-- Chart 1: Research Stats -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0 rounded">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Research Output</h4>
+                        <canvas id="Chart1"></canvas>
+                    </div>
+                </div>
+                <script>
+                    const Chart1 = document.getElementById('Chart1');
+                    new Chart(Chart1, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Journal Papers', 'Conference Papers', 'Books', 'Book Chapters', 'Grants', 'Awards'],
+                            datasets: [{
+                                label: 'Number of Publications',
+                                data: [12, 19, 5, 7, 9, 4],
+                                backgroundColor: ['#3498db', '#9b59b6', '#f39c12', '#1abc9c', '#e74c3c', '#2ecc71'],
+                                borderColor: ['#2980b9', '#8e44ad', '#d68910', '#16a085', '#c0392b', '#27ae60'],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: { stepSize: 5 }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    position: 'top'
+                                },
+                                tooltip: {
+                                    enabled: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            
+
+            <!-- Chart 2: Research Progress -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0 rounded">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Education Level Progress</h4>
+                        <canvas id="Chart2"></canvas>
+                    </div>
+                </div>
+                <script>
+                    const Chart2 = document.getElementById('Chart2');
+                    new Chart(Chart2, {
+                        type: 'line',
+                        data: {
+                            labels: ['Diploma', 'Bachelor\'s', 'Master\'s', 'PhD'],
+                            datasets: [{
+                                label: 'Progression',
+                                data: [30, 60, 80, 100],  // Completion percentage at each level
+                                fill: false,
+                                borderColor: '#007bff',
+                                tension: 0.1,
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    max: 100,  // Set maximum to 100% to reflect full completion
+                                    ticks: { stepSize: 20 }
+                                }
+                            },
+                            plugins: {
+                                legend: { position: 'top' },
+                                tooltip: { enabled: true }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            
+
+            <!-- Chart 3: Research Status -->
+<div class="col-md-4 mb-4">
+    <div class="card shadow-sm border-0 rounded">
+        <div class="card-body">
+            <h4 class="card-title text-center">Research Project Stages</h4>
+            <canvas id="Chart3"></canvas>
+        </div>
+    </div>
+    <script>
+        const Chart3 = document.getElementById('Chart3');
+        new Chart(Chart3, {
+            type: 'line',
+            data: {
+                labels: ['Proposal', 'Literature Review', 'Data Collection', 'Analysis', 'Writing', 'Submission'],
+                datasets: [{
+                    label: 'Completion Status (%)',
+                    data: [20, 40, 50, 70, 85, 100],  // Progress at each stage
+                    fill: false,
+                    borderColor: '#28a745',
+                    borderWidth: 2,
+                    stepped: true  // Reflects discrete jumps between stages
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,  // Full completion at 100%
+                        ticks: { stepSize: 20 }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: { enabled: true }
+                }
+            }
+        });
+    </script>
+</div>
+</div>
+</div>
+</div>
+
+
+    <!-- Research Data Section -->
+<div class="container my-5">
+    <h3 class="mb-4"><i class="fa-solid fa-file"></i> Research Data</h3>
+
+    <div class="row my-3">
+
+        <!-- Framework Usage in Learning Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded">
+                <div class="card-body">
+                    <h6 class="card-title"><i class="fa-solid fa-folder-open"></i> Framework Usage in Learning</h6>
+                    <p>The use of structured frameworks in learning enhances knowledge retention and provides a clear pathway for problem-solving. By applying these frameworks, students can break down complex topics, streamline their workflow, and achieve better academic outcomes. This approach fosters critical thinking and ensures a more organized learning experience.</p>
+                    
+                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: 75%">75%</div>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-folder"></i> Open</button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-check-double"></i>Ongoing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Data Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded">
+                <div class="card-body">
+                    <h6 class="card-title"><i class="fa-solid fa-folder-open"></i> Research Paper Progress</h6>
+                    <p>Research paper is in the final stages, awaiting review before submission. Continue refining the methodology section.</p>
+
+                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-warning" style="width: 50%">50%</div>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-folder"></i> Open</button>
+                        <button type="button" class="btn btn-warning btn-sm"><i class="fa-solid fa-triangle-exclamation"></i> Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Data Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded">
+                <div class="card-body">
+                    <h6 class="card-title"><i class="fa-solid fa-folder-open"></i> Data Collection Phase</h6>
+                    <p>Data collection is ongoing. The team is gathering survey responses from the participants for analysis.</p>
+
+                    <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 15%">15%</div>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-folder"></i> Open</button>
+                        <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-triangle-exclamation"></i> Critical</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+<footer class="footer mt-auto py-3 bg-body-tertiary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 UiTM E-Profile. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/uitmrasmi/" class="text-white mx-2"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="https://x.com/uitmofficial?mx=2" class="text-white mx-2"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Dark Mode Script -->
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            document.getElementById('themeLabel').innerText = theme === 'dark' ? 'Dark Mode On' : 'Dark Mode Off';
+        }
+
+        document.getElementById('darkModeToggle').addEventListener('change', function (event) {
+            if (event.target.checked) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        });
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+                if (savedTheme === 'dark') {
+                    document.getElementById('darkModeToggle').checked = true;
+                }
+            }
+        };
+    </script>
+
+</body>
+
+</html>

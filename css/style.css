@@ -1,0 +1,951 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(135deg, #b96cbc, #660c8a, #610564);
+  background-size: 400% 100%; /* Smooth animation effect */
+  -webkit-background-clip: text; /* Compatibility for Safari */
+  background-clip: text;
+  animation: gradientShift 4s ease infinite; /* Animate gradient */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Add depth */
+  text-align: center; /* This will center the title text */
+}
+
+/* Animation for gradient shifting */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover effect for glowing appearance */
+.title:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(182, 108, 188, 0.8);
+  transform: scale(1.1); /* Slight enlargement */
+  transition: all 0.4s ease-in-out;
+}
+
+/* Navbar Styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Navbar styling */
+.navbar {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #660c8a, #610564); /* Gradient background */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.brand-title {
+  font-family: 'Montserrat', sans-serif; /* Elegant font for the brand */
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Navbar link styling */
+.nav-link {
+  color: #ffffff;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+  transform: scale(1.1); /* Slight hover enlargement */
+  text-shadow: 1px 1px 10px rgba(255, 204, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #ffcc00; /* Highlight active link */
+  text-shadow: 1px 1px 5px rgba(255, 204, 0, 0.7);
+}
+
+/* Mobile toggle button */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Section Styling */
+.container.my-5 {
+  position: relative;
+}
+
+h2 {
+  font-size: clamp(3rem, 6vw, 4.5rem); /* Larger responsive text */
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Add gradient background to buttons */
+.btn-primary,
+.btn-success {
+  background: linear-gradient(45deg, #660c8a, #610564);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Statistics Cards Styling */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Toggle Enhancements */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #0919f8; /* Highlighted switch */
+  border-color: #0919f8;
+}
+
+.form-check-label {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+body[data-bs-theme='dark'] .form-check-label {
+  color: #fff;
+}
+
+body[data-bs-theme='light'] .form-check-label {
+  color: #000;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(45deg, #610564, #660c8a);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Hover effect for social media links */
+.social-links a:hover {
+  transform: scale(1.1);
+  color: #ffcc00;
+  transition: transform 0.3s ease;
+}
+
+
+/* Scoped CSS for the Profile Section */
+.profile-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-section h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.profile-section p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Card Styling */
+.profile-section .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-section .card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.profile-section .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-section .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-section .card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Hover Effects for Profile Cards */
+.profile-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-section .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.profile-section .extra-info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-section .card:hover .extra-info {
+  display: block;
+  opacity: 1;
+}
+
+.profile-section .card .btn-primary {
+  background: linear-gradient(45deg, #660c8a, #610564);
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.profile-section .card .btn-primary:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  transform: translateY(-5px);
+}
+
+/* Badge Styling for Profile */
+.profile-section .badge {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Media Queries for Profile Section Responsiveness */
+@media (max-width: 768px) {
+  .profile-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-section .card-body {
+    padding: 15px;
+  }
+
+  .profile-section .card-title {
+    font-size: 1.2rem;
+  }
+
+  .profile-section .card-text {
+    font-size: 0.9rem;
+  }
+
+  .profile-section .card-img-top {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+/* About Section Styling */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-section h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Section Titles Styling */
+.section-title h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #660c8a;
+}
+
+/* Key Features and Education Level Cards */
+.about-section .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-section .card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Custom styles for Key Features Section */
+.key-features-section .card-custom {
+  background: linear-gradient(135deg, #03f367, #015f16); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Strong shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.key-features-section .card-custom .card-body {
+  color: white; /* White text for better contrast */
+  padding: 30px; /* Added padding for more space inside the card */
+}
+
+.key-features-section .card-custom .card-title {
+  font-size: 1.5rem; /* Larger size for the titles */
+  font-weight: bold; /* Bold title for emphasis */
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 1px; /* Slight spacing between letters for better readability */
+}
+
+.key-features-section .card-custom .card-text {
+  font-size: 1.1rem; /* Slightly larger text for better readability */
+  line-height: 1.6;
+}
+
+/* Hover effect for the cards */
+.key-features-section .card-custom:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Adjusting card spacing on smaller screens */
+@media (max-width: 767px) {
+  .key-features-section .card-custom {
+      margin-bottom: 20px;
+  }
+}
+
+
+/* Hover Effects for About Cards */
+.about-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Explore Box Styling */
+.explore-box {
+  background: linear-gradient(45deg, #660c8a, #610564); /* Gradient background */
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-box p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.explore-box .btn-gradient {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.explore-box .btn-gradient:hover {
+  background-color: #ff9900;
+  transform: scale(1.05);
+}
+
+/* Media Queries for About Section Responsiveness */
+@media (max-width: 768px) {
+  .about-section h2 {
+      font-size: 1.5rem;
+  }
+
+  .about-section .card-body {
+      padding: 15px;
+  }
+
+  .about-section .card-title {
+      font-size: 1.2rem;
+  }
+
+  .about-section .card-text {
+      font-size: 0.9rem;
+  }
+
+  .about-section .explore-box {
+      padding: 20px;
+  }
+}
+
+/* Custom styles for Vision and Mission Section */
+.vision-mission-section .card-custom {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Strong shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.vision-mission-section .card-custom .card-body {
+  color: white; /* White text for better contrast */
+  padding: 30px; /* Added padding for more space inside the card */
+}
+
+.vision-mission-section .card-custom .card-title {
+  font-size: 1.25rem; /* Adjusted size for better readability */
+  font-weight: bold;
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+.vision-mission-section .card-custom .card-text {
+  font-size: 1rem; /* Normal size for text */
+  line-height: 1.5;
+}
+
+/* Hover effect for the cards */
+.vision-mission-section .card-custom:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Adjusting card spacing on smaller screens */
+@media (max-width: 767px) {
+  .vision-mission-section .card-custom {
+      margin-bottom: 20px;
+  }
+}
+ 
+/* Custom styles for Education Level Section */
+.education-level-section .card-custom {
+  background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient background from purple to blue */
+  border-radius: 12px; /* Rounded corners for the cards */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.education-level-section .card-custom .card-body {
+  color: white; /* White text for better contrast */
+  padding: 25px; /* Adjust padding for spacing */
+  text-align: center; /* Center text alignment */
+}
+
+.education-level-section .card-custom .card-title {
+  font-size: 1.4rem; /* Larger font size for the title */
+  font-weight: bold; /* Bold for emphasis */
+  text-transform: uppercase; /* Uppercase for titles */
+  margin-bottom: 15px; /* Spacing below title */
+}
+
+.education-level-section .card-custom .card-text {
+  font-size: 1.1rem; /* Slightly larger text for clarity */
+  line-height: 1.5; /* Increased line height for better readability */
+}
+
+.education-level-section .card-custom .btn-primary {
+  background-color: #f76c6c; /* Light pink color for the buttons */
+  border-color: #f76c6c; /* Match button border to background */
+  font-weight: bold; /* Bold text for buttons */
+  border-radius: 8px; /* Rounded button corners */
+  transition: all 0.3s ease; /* Smooth button hover effect */
+}
+
+/* Hover effects for cards */
+.education-level-section .card-custom:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Hover effect for buttons */
+.education-level-section .card-custom .btn-primary:hover {
+  background-color: #ff9d9d; /* Lighter pink on hover */
+  border-color: #ff9d9d; /* Lighter border color */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  .education-level-section .card-custom {
+      margin-bottom: 20px;
+  }
+}
+
+
+/* Setting Section */
+/* Custom styles for Settings Section */
+.settings-section {
+  padding: 50px 15px;
+}
+
+.settings-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333; /* Dark text for header */
+}
+
+/* Style for individual settings categories */
+.settings-category {
+  background: #fff; /* White background for cards */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  padding: 20px;
+  margin-bottom: 30px; /* Space between categories */
+}
+
+.settings-category h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333; /* Dark text for section titles */
+  margin-bottom: 15px;
+}
+
+/* Form input styles */
+.settings-category form label {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #555; /* Soft text color */
+}
+
+.settings-category form input,
+.settings-category form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* Space between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners for inputs */
+  font-size: 1rem;
+}
+
+.settings-category form input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.settings-category form button {
+  background-color: #007bff; /* Blue color for buttons */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settings-category form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  .settings-section {
+      padding: 20px;
+  }
+
+  .settings-category {
+      padding: 15px;
+  }
+
+  .settings-category form label {
+      font-size: 1rem;
+  }
+
+  .settings-category form input,
+  .settings-category form select {
+      font-size: 0.95rem;
+  }
+
+  .settings-category form button {
+      width: 100%; /* Full width for buttons on small screens */
+  }
+}
+
+/* Scoped CSS for the Research Report Section */
+.research-report-section .card-body {
+  padding: 20px;
+}
+
+.research-report-section .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.research-report-section .card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Progress Bar Styling */
+.research-report-section .progress {
+  height: 20px;
+}
+
+.research-report-section .progress-bar {
+  background-color: #660c8a;
+  text-align: center;
+  color: white;
+}
+
+/* Button Styles for Report */
+.research-report-section .btn-secondary {
+  background-color: #333;
+  border-color: #333;
+}
+
+.research-report-section .btn-secondary:hover {
+  background-color: #610564;
+  border-color: #610564;
+}
+
+.research-report-section .btn-primary {
+  background-color: #660c8a;
+  border-color: #660c8a;
+}
+
+.research-report-section .btn-primary:hover {
+  background-color: #610564;
+  border-color: #610564;
+}
+
+/* Specific Card Styling */
+.research-report-section .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-report-section .card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects for Cards */
+.research-report-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.research-report-section .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Report Download Button */
+.research-report-section .download-btn {
+  margin-top: 10px;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.research-report-section .download-btn:hover {
+  background-color: #ff9900;
+  transform: translateY(-5px);
+}
+
+/* Scoped CSS for the Login Section */
+.login-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.login-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #660c8a;
+}
+
+.login-section .card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-section .card-body {
+  padding: 30px;
+}
+
+.login-section .card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #610564;
+}
+
+.login-section .form-control {
+  border-radius: 5px;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-section .form-control:focus {
+  border-color: #660c8a;
+  box-shadow: 0 0 10px rgba(102, 12, 138, 0.3);
+}
+
+.login-section .form-check-input:checked {
+  background-color: #660c8a;
+  border-color: #660c8a;
+}
+
+.login-section .btn-primary {
+  background: linear-gradient(45deg, #660c8a, #610564);
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-section .btn-primary:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  transform: translateY(-5px);
+}
+
+.login-section .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Card Hover Effect */
+.login-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Login Section Responsiveness */
+@media (max-width: 768px) {
+  .login-section h2 {
+      font-size: 1.5rem;
+  }
+
+  .login-section .card-body {
+      padding: 20px;
+  }
+
+  .login-section .card-title {
+      font-size: 1.2rem;
+  }
+
+  .login-section .btn-primary {
+      font-size: 1rem;
+  }
+}
+
+/* Scoped CSS for the View Profile Page */
+.viewprofile {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2c003e, #610564);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.viewprofile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ffcc00;
+  object-fit: cover;
+}
+
+.viewprofile h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #ffcc00;
+  font-weight: bold;
+  text-align: center;
+}
+
+.viewprofile p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #ddd;
+  margin: 0;
+}
+
+.viewprofile em {
+  color: #ffcc00;
+}
+
+/* General Section Styling */
+.section {
+  margin-bottom: 30px;
+  padding: 30px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #4b0082, #8f03f3);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.section h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section p,
+.section ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.section ul {
+  list-style: disc inside;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* Timeline Section */
+.timeline {
+  margin-top: 20px;
+}
+
+.timeline .progress {
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline .progress-bar {
+  background: linear-gradient(45deg, #610564, #ffcc00);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Contact Information Section */
+.contact-info a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Download CV Button */
+.text-center .btn-primary {
+  background: none;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-center .btn-primary:hover {
+  background: #ffcc00;
+  color: #610564;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .viewprofile h2 {
+    font-size: 1.6rem;
+  }
+
+  .viewprofile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section h3 {
+    font-size: 1.4rem;
+  }
+
+  .section p,
+  .section ul {
+    font-size: 0.9rem;
+  }
+}
+

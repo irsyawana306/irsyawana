@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UiTM E-Profile - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <body>
+
+        <!-- Header -->
+        <div class="container my-4">
+            <div class="title">UiTM E-Profile</div>
+        </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="image/logo.png" alt="logo" width="30" height="24">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profiles.html">Profiles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="setting.html">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="report.html">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 research-report-section">
+        <h2>Research Reports</h2>
+        <div class="row">
+            <div class="container my-5">
+                <div class="row">
+                    <!-- Ayu Irsyawana Izzah - Islamic Studies -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary font-weight-bold">Research on Islamic Jurisprudence and Ethics</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> Ayu Irsyawana Izzah (Faculty of Islamic Studies)</p>
+                                <p class="card-text"><strong>Start Date:</strong> March 2024 | <strong>Expected Completion:</strong> September 2024</p>
+                                <p class="card-text">This research focuses on the evolution of Islamic jurisprudence in Southeast Asia, particularly exploring the ethical considerations of contemporary issues like digital economy and social media from an Islamic perspective.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Islamic Jurisprudence, Ethics, Southeast Asia, Digital Economy</p>
+                                <p><strong>Impact:</strong> This research aims to develop a framework for ethical decision-making in modern societies based on Islamic teachings.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Anissa Suhaimi - Media and Communication -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning font-weight-bold">Research on Social Media Influence in Political Communication</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> Anissa Suhaimi (Faculty of Media and Communication)</p>
+                                <p class="card-text"><strong>Start Date:</strong> January 2024 | <strong>Expected Completion:</strong> June 2024</p>
+                                <p class="card-text">Anissa's research explores the role of social media in shaping political discourse and its influence on voter behavior in Malaysia, focusing on the ethical implications of political campaigns.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Social Media, Political Communication, Ethics, Voter Behavior</p>
+                                <p><strong>Impact:</strong> The research aims to offer insights into how social media can be regulated to ensure ethical political communication.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- NurHumairah Ali - Applied Science -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-success font-weight-bold">Research on Environmental Chemistry and Sustainable Practices</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> NurHumairah Ali (Faculty of Applied Science)</p>
+                                <p class="card-text"><strong>Start Date:</strong> April 2024 | <strong>Expected Completion:</strong> October 2024</p>
+                                <p class="card-text">This research focuses on eco-friendly materials and sustainable chemical processes aimed at reducing industrial waste and pollution, contributing to environmental preservation.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Environmental Chemistry, Sustainability, Waste Reduction</p>
+                                <p><strong>Impact:</strong> The research contributes to the development of practical, sustainable solutions for industries to reduce their environmental impact.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Nurul Fatihah - Accounting -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-info font-weight-bold">Research on Financial Management in Islamic Banking</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> Nurul Fatihah (Faculty of Accounting)</p>
+                                <p class="card-text"><strong>Start Date:</strong> February 2024 | <strong>Expected Completion:</strong> August 2024</p>
+                                <p class="card-text">Fatihah's research explores financial management strategies in Islamic banking systems, focusing on risk management and ethical investment practices.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Islamic Banking, Financial Management, Risk Management</p>
+                                <p><strong>Impact:</strong> The research seeks to enhance the understanding of Islamic financial practices, promoting ethical investments and financial stability.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Muhammad Aidid - Civil Engineering -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger font-weight-bold">Research on Sustainable Construction Materials</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> Muhammad Aidid (Faculty of Civil Engineering)</p>
+                                <p class="card-text"><strong>Start Date:</strong> May 2024 | <strong>Expected Completion:</strong> November 2024</p>
+                                <p class="card-text">Aidid’s research focuses on innovative construction materials that are cost-effective and environmentally sustainable, such as recycled materials and advanced composites.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Sustainable Construction, Green Engineering, Eco-friendly Materials</p>
+                                <p><strong>Impact:</strong> The research aims to reduce the carbon footprint of construction projects, providing practical solutions for sustainable civil engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Insyirah Soffiah - Law -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-lg border-0 rounded-lg h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-purple font-weight-bold">Research on Legal Frameworks for Cybersecurity and Privacy Protection</h5>
+                                <p class="card-text"><strong>Researcher(s):</strong> Insyirah Soffiah (Faculty of Law)</p>
+                                <p class="card-text"><strong>Start Date:</strong> March 2024 | <strong>Expected Completion:</strong> September 2024</p>
+                                <p class="card-text">Insyirah’s research examines the legal frameworks surrounding cybersecurity and data privacy, aiming to enhance legal protections in the digital space against cyber threats.</p>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress my-3" style="height: 20px;">
+                                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                </div>
+                                <p><strong>Research Topics:</strong> Cybersecurity, Legal Frameworks, Data Privacy</p>
+                                <p><strong>Impact:</strong> The research aims to strengthen laws around cybersecurity and data protection, promoting safer digital environments for users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+
+ <!-- Footer -->
+<footer class="footer mt-auto py-3 bg-body-tertiary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 UiTM E-Profile. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/uitmrasmi/" class="text-white mx-2"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="https://x.com/uitmofficial?mx=2" class="text-white mx-2"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Dark Mode Script -->
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            document.getElementById('themeLabel').innerText = theme === 'dark' ? 'Dark Mode On' : 'Dark Mode Off';
+        }
+
+        document.getElementById('darkModeToggle').addEventListener('change', function (event) {
+            if (event.target.checked) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        });
+
+        window.onload = function () {
+            let savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+                if (savedTheme === 'dark') {
+                    document.getElementById('darkModeToggle').checked = true;
+                }
+            }
+        };
+    </script>
+
+</body>
+
+</html>
